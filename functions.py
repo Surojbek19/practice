@@ -21,3 +21,20 @@ print(result1)
 
 result2 = greeting("Michael")  # Michael is the argument of the function
 print(result2)
+
+
+print("====== Keyword and default argument ======")
+
+
+def give_greeting(name, age=30):
+    print("give_greeting id executed")
+    return f"Hi {name}, you are {age} years old!"
+
+
+# This is keyword given argument
+result3 = give_greeting(name="Martin", age=32)
+print("result3:", result3)
+
+# age is not given here, and it is coming from above difault age age=30
+result4 = give_greeting("Michael")
+print("result4:", result4)
