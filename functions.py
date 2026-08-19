@@ -38,3 +38,18 @@ print("result3:", result3)
 # age is not given here, and it is coming from above difault age age=30
 result4 = give_greeting("Michael")
 print("result4:", result4)
+
+
+print("===== Scope =====")
+
+b = 100
+
+
+def calculate(a, b):  # if calculate(a) b is not give in define  section it uses b = 100 from above
+    c = a * b
+    print(f"Value of c: {c}")
+
+
+calculate(4, 30)  # here b is given so it use it from it
+
+calculate(7)  # here b is not given so it uses b = 100 from above
