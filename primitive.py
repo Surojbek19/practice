@@ -29,3 +29,21 @@ print(f"the reuslt (4): {result}")
 print(course)
 
 print("===== boolean =====")
+# Functions > type(), input(), bool(), int(), str()
+
+y = input("Give your value for y:")
+print("y:", y)
+
+result = y.isnumeric()
+
+print(f"The input value is numeric: {result}")
+
+# TRUTHY vs FALSY
+# TRUTHY: True  100  -100  "MIT"
+# FALSY: False  0  ""  None
+
+test_falsy = ""  # "", False, 0, None (All of these are falsy value)
+print("The test_falsy:", bool(test_falsy))
+
+test_truthy = "Hello"  # "MIT", 65, True, -23 (All of these truthy value)
+print("The test_truthy:", bool(test_truthy))
