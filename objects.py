@@ -25,7 +25,6 @@ car_obj = dict(name="Tayota", year=2024, electric=False)
 
 try:
     print("Passed here!!!")
-    a = car_obj.speed
     # here error happens so this line and other belove lines dont work
     result = car_obj["country"]
     print("result:", result)
