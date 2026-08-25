@@ -48,3 +48,36 @@ print("Ostatic state:", new_message)
 # Static method belongs to logically to the class, but it doesnt need a specific object(self).
 
 Person.expalin()
+
+
+print("==== Special/magic method ====")
+# Python's msot common spacial methods are below:
+# __init__ __new__ __str__ __call__ __getitem__ __eq__ __len__
+
+
+class Car():
+    # state
+    description = "This calls makes cars!!!"
+
+    # constructure
+    # But __new__ is not used much coz it is already have inside the function
+    def __new__(cls, *args):
+        print("*__new__*")
+        return super().__new__(cls)
+
+    def __init__(self, name, year):
+        self.name = name
+        self.year = year
+
+    # methods
+
+    def start_engine(self):
+        print(f"The {self.name} started the engine!!!")
+
+    def stop_engine(self):
+        print(f"The {self.name} stopped the engine!!!")
+
+
+new_car = Car("Ferrari", 2003)
+new_car.start_engine()
+new_car.stop_engine()
