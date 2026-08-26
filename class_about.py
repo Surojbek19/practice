@@ -19,6 +19,7 @@ class Person():
     def say_age(self):
         print(f"{self.name} says: I am {self.age} years old!!")
 
+    # This decorator make satic method
     @classmethod
     def expalin(cls):
         print("Static method property executed!!!")
