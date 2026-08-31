@@ -36,6 +36,9 @@ class Dog(Animal):  # Child class
     def action(self):
         print("I can protect you!!!")
 
+    def make_voice(self):
+        print(f"{self.name} says {self.sound}!")
+
 
 class Cat(Animal):  # Child class
     # state
@@ -92,3 +95,10 @@ print(Animal.description)
 print(Dog.description)
 
 print(fish.voice, cat.voice, dog.voice)
+
+print("======= POLIMORPHISM =======")
+# POLYMORPHISM means the same method name can behave differntly depending on which object is using it.
+# dog > Dog > Animal > object
+dog.make_voice()
+a = isinstance(dog, Dog)  # this means "is dog instance of Dog?"
+print(f"The result: {a}")
